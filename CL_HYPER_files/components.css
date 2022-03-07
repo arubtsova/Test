@@ -61,8 +61,7 @@ img {
 }
 
 .wrapper__sliders{
-  display: flex;
-  flex-direction: row;
+position: relative;
 }
 
 html.w-mod-touch * {
