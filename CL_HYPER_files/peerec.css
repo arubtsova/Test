@@ -301,6 +301,14 @@
   text-shadow: 1px 1px 1px #000;
 }
 
+.wrapper-block .div-block-4:first-child strong{
+  color: red;
+}
+
+.wrapper-block .div-block-4:last-child strong{
+color: red;
+}
+
 .div-block-4 {
   display: -webkit-box;
   display: -webkit-flex;
