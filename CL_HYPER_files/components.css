@@ -661,6 +661,8 @@ textarea.w-select {
   }
   .w-row,
   .w-container .w-row {
+    display: flex;
+    flex-direction: column;
     margin-left: 0;
     margin-right: 0;
   }
