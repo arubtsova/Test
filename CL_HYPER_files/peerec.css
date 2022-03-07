@@ -320,6 +320,10 @@
   background-color: #f0f0f0;
 }
 
+.div-block-4_photo{
+  transform: rotate(180deg);
+}
+
 .paragraph-5 {
   margin-top: 10px;
   padding-left: 10px;
