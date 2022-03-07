@@ -59,6 +59,12 @@ img {
   vertical-align: middle;
   display: inline-block;
 }
+
+.wrapper__sliders{
+  display: flex;
+  flex-direction: row;
+}
+
 html.w-mod-touch * {
   background-attachment: scroll !important;
 }
