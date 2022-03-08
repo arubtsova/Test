@@ -77,9 +77,12 @@
 
 .button__date{
   background-color: rgb(15, 15, 153);
+  color: white;
   border-radius: 15px;
   border-color: aliceblue;
   height: 50px;
+  width: 150px;
+
 }
 
 .nav-link {

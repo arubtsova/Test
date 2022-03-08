@@ -17,7 +17,8 @@
     </div>
 
     <div class="button">
-      <input class='button__date' type="text" value="">
+      <button type="button" class="button__date" id="button__show-date"><span>Date</span></button>
+      
     </div>
 
     <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
@@ -214,10 +215,12 @@
         });
       }
 
+      const dateYester = document.querySelector('.button__date').innerHTML = new Date(Date.now()-86400000).toLocaleDateString();
+      
 
   //     document.addEventListener('DOMContentLoaded', function () {
   //   // инициализация слайдера
-  //   var slider = new SimpleAdaptiveSlider('.slider', {
+  //   const slider = new SimpleAdaptiveSlider('.slider', {
   //     autoplay: false,
   //     interval: 5000,
   //     swipe: true,
