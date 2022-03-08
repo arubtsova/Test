@@ -49,51 +49,19 @@
 
 
 
-    <!-- <div class="slider">
-      <div class="slider__wrapper">
-        <div class="slider__items">
-          <div class="slider__item">
-            <div style="height: 250px; background: #3f51b5;"></div>
-          </div>
-          <div class="slider__item">
-            <div style="height: 250px; background: #607d8b;"></div>
-          </div>
-          <div class="slider__item">
-            <div style="height: 250px; background: #f44336;"></div>
-          </div>
-          <div class="slider__item">
-            <div style="height: 250px; background: #4caf50;"></div>
-          </div>
+    <div class="wrapper"> 
+        <div class="sliders">
+            <div class="slider-line">
+                <img src="CL_HYPER_files\1.jpg" alt="" >
+                <img src="CL_HYPER_files\2.jpg" alt="" >
+                <img src="CL_HYPER_files\3.jpg" alt="" >
+                <img src="CL_HYPER_files\4.jpg" alt="" >
+            </div>
         </div>
+        <button class="button-before"><img src="CL_HYPER_files\left.png" alt=""></button>
+        <button class="button-next"><img src="CL_HYPER_files\right.png" alt=""></button>
+        
       </div>
-      <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
-      <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
-    </div> -->
-
-
-
-    <!-- <div class="wrapper"> -->
-        <!-- <div class="wrapper__sliders-type">
-            <div class="wrapper__sliders">
-              <img src="CL_HYPER_files\left.png" alt="" width="100px" height="50px">
-            </div>
-            <div class="wrapper__sliders">
-              <img src="CL_HYPER_files\1.jpg" alt="" width="300px" height="200px">
-            </div>
-            <div class="wrapper__sliders">
-              <img src="CL_HYPER_files\2.jpg" alt="" width="300px" height="200px">
-            </div>
-            <div class="wrapper__sliders">
-              <img src="CL_HYPER_files\3.jpg" alt="" width="300px" height="200px">
-            </div>
-            <div class="wrapper__sliders">
-              <img src="CL_HYPER_files\4.jpg" alt="" width="300px" height="200px">
-            </div>
-            <div class="wrapper__sliders">
-              <img src="CL_HYPER_files\right.png" alt="" width="100px" height="50px">
-            </div>
-        </div>
-      </div> -->
     
 
 
@@ -218,14 +186,25 @@
       const dateYester = document.querySelector('.button__date').innerHTML = new Date(Date.now()-86400000).toLocaleDateString();
       
 
-  //     document.addEventListener('DOMContentLoaded', function () {
-  //   // инициализация слайдера
-  //   const slider = new SimpleAdaptiveSlider('.slider', {
-  //     autoplay: false,
-  //     interval: 5000,
-  //     swipe: true,
-  //   });
-  // });
+  let offset = 0;
+  const slider = document.querySelector('.slider-line')
+
+  document.querySelector('.button-next').addEventListener('click', function(){
+    offset = offset + 200;
+    if(offset > 600){
+      offset = 0;
+    }
+    slider.style.left = -offset + 'px';
+  });
+
+
+  document.querySelector('.button-before').addEventListener('click', function(){
+    offset = offset - 200;
+    if(offset < 0){
+      offset = 600;
+    }
+    slider.style.left = -offset + 'px';
+  });
 
 </script> 
 
