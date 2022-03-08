@@ -326,13 +326,15 @@
 color: red;
 }
 
+.wrapper-sliders{
 
+}
 
 .sliders{
   width: 200px;
   height: 200px;
   border: 2px solid black;
-  margin: 30px;
+  margin: auto;
   overflow: hidden;
 }
 
@@ -343,6 +345,24 @@ color: red;
   position: relative;
   left: 0;
   transition: all ease 2s;
+}
+
+.button-before{
+  background-color: white;
+  height: 70px;
+  width: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.button-next{
+  background-color: white;
+  height: 70px;
+  width: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 
 
