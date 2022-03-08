@@ -18,7 +18,6 @@
 
     <div class="button">
       <button type="button" class="button__date" id="button__show-date"><span>Date</span></button>
-      
     </div>
 
     <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
@@ -47,8 +46,6 @@
     <p class="paragraph-4">Si padece hipertensión, le sugiero que tome la decisión correcta. No pierdas el tiempo. Cuanto más tiempo pospongas el tratamiento, más colesterol se acumulará en tu cuerpo y peor te sentirás. Deja de esperar un milagro. No descuides tu condición hasta que empeore. Una de las reglas de la medicina tradicional es la siguiente:<br>‍<br><em>"Un sanador sabio trata a los sanos, no a los enfermos. Curar a los enfermos es como esperar la sed para cavar un pozo".<br>‍<br></em>Si realiza una limpieza vascular regularmente, eliminará todos los síntomas de hipertensión en un mes. Detonic te curará de la presión arterial alta crónica durante un mes y te hará sentir saludable nuevamente. Desaparecen problemas como dolor de cabeza, dificultad para respirar, mareos, entumecimiento de las manos. Si sufres de hipertensión, sabes lo bien que es volver a estar saludable.</p>
     
 
-
-
     <div class="wrapper-sliders"> 
         <div class="sliders">
             <div class="slider-line">
@@ -58,13 +55,12 @@
                 <img src="CL_HYPER_files\4.jpg" alt="" >
             </div>
         </div>
-        <button class="button-before"><img src="CL_HYPER_files\left.png" alt=""></button>
-        <button class="button-next"><img src="CL_HYPER_files\right.png" alt=""></button>
+        <div class="buttom-direction">
+          <button class="buttom-before"><img src="CL_HYPER_files\left.png" alt=""></button>
+          <button class="buttom-next"><img src="CL_HYPER_files\right.png" alt=""></button>
+        </div>
+        
       </div>
-    
-
-
-
 
     
     <div class="form-block w-form">
@@ -188,7 +184,7 @@
   let offset = 0;
   const slider = document.querySelector('.slider-line')
 
-  document.querySelector('.button-next').addEventListener('click', function(){
+  document.querySelector('.buttom-next').addEventListener('click', function(){
     offset = offset + 200;
     if(offset > 600){
       offset = 0;
@@ -197,7 +193,7 @@
   });
 
 
-  document.querySelector('.button-before').addEventListener('click', function(){
+  document.querySelector('.buttom-before').addEventListener('click', function(){
     offset = offset - 200;
     if(offset < 0){
       offset = 600;
