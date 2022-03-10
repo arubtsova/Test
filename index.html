@@ -166,52 +166,51 @@
 
  
 <script>
-  const btn = document.querySelectorAll('a[href*="#"]');
-      const hiddenElement = document.getElementById("target");
-      for (let btns of btn) {
-        btns.addEventListener("click", function (e) {
-          e.preventDefault();
-          hiddenElement.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        });
-      }
+  // const btn = document.querySelectorAll('a[href*="#"]');
+  //     const hiddenElement = document.getElementById("target");
+  //     for (let btns of btn) {
+  //       btns.addEventListener("click", function (e) {
+  //         e.preventDefault();
+  //         hiddenElement.scrollIntoView({
+  //           behavior: "smooth",
+  //           block: "start",
+  //         });
+  //       });
+  //     }
 
-      const dateYester = document.querySelector('.button__date').innerHTML = new Date(Date.now()-86400000).toLocaleDateString();
+  //     const dateYester = document.querySelector('.button__date').innerHTML = new Date(Date.now()-86400000).toLocaleDateString();
       
 
-  let offset = 0;
-  const slider = document.querySelector('.slider-line')
+  // let offset = 0;
+  // const slider = document.querySelector('.slider-line')
 
-  document.querySelector('.buttom-next').addEventListener('click', function(){
-    offset = offset + 200;
-    if(offset > 600){
-      offset = 0;
-    }
-    slider.style.left = -offset + 'px';
-  });
-
-
-  document.querySelector('.buttom-before').addEventListener('click', function(){
-    offset = offset - 200;
-    if(offset < 0){
-      offset = 600;
-    }
-    slider.style.left = -offset + 'px';
-  });
+  // document.querySelector('.buttom-next').addEventListener('click', function(){
+  //   offset = offset + 200;
+  //   if(offset > 600){
+  //     offset = 0;
+  //   }
+  //   slider.style.left = -offset + 'px';
+  // });
 
 
-  let link = window.location.search.replace('?', '') .split('&').reduce(function(p,e){
-            let a = e.split('=');
-            p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
-            return p;
-        },
-        {}
+  // document.querySelector('.buttom-before').addEventListener('click', function(){
+  //   offset = offset - 200;
+  //   if(offset < 0){
+  //     offset = 600;
+  //   }
+  //   slider.style.left = -offset + 'px';
+  // });
+
+
+  let link = window.location.search.replace('?', '') .split('&');
+  let res = link.reduce(function(a,b){
+            let spl = b.split('=');
+            a[ decodeURIComponent(spl[0])] = decodeURIComponent(spl[1]);
+            return a;
+        },{}
     );;
 
-  console.log(link);
-
+  console.log(res);
 
 
 
