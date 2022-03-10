@@ -181,7 +181,7 @@
       const dateYester = document.querySelector('.button__date').innerHTML = new Date(Date.now()-86400000).toLocaleDateString();
       
 
-  let offset = 0;
+  const offset = 0;
   const slider = document.querySelector('.slider-line')
 
   document.querySelector('.buttom-next').addEventListener('click', function(){
@@ -202,10 +202,10 @@
   });
 
 
-  let link = window.location.search.replace('?', '') .split('&');
-  let res = link.reduce(function(a,b){
-            let spl = b.split('=');
-            a[ decodeURIComponent(spl[0])] = decodeURIComponent(spl[1]);
+  const link = window.location.search.replace('?', '') .split('&');
+  const res = link.reduce(function(a,b){
+            const spl = b.split('=');
+            a[decodeURIComponent(spl[0])] = decodeURIComponent(spl[1]);
             return a;
         },{}
     );
@@ -216,10 +216,5 @@
 
 
 </script> 
-
-
-
-
-
 
 </body></html>
