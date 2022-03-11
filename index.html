@@ -81,8 +81,9 @@
               <option value="value2">2</option>
               <option value="value3">3</option>
             </select>
-        <input type="text" class="text-field w-input" maxlength="256" name="name" data-name="name" placeholder="Tu nombre" id="name-3" required="">
+        <input type="text" class="text-field w-input" maxlength="256" name="name" data-name="name" placeholder="Tu nombre" id="name-3" required="" >
         <input type="tel" class="text-field-2 w-input" minlength="9" maxlength="12" name="phone" data-name="phone" placeholder="Número de teléfono" id="phone" required="">
+        <input type="hidden" name="bay" value="">
         <input type="submit" value="Hacer un pedido" id="target" data-wait="Please wait..." class="submit-button w-button">
       </form>
       <div class="w-form-done">
@@ -145,6 +146,7 @@
           </div>
         </div><input type="text" class="text-field w-input" maxlength="256" name="name" data-name="name" placeholder="Tu nombre" id="name-4">
         <input type="tel" class="text-field-2 w-input" minlength="9" maxlength="12" name="phone" data-name="phone" placeholder="Número de teléfono" id="phone-2" required="">
+        <input type="hidden" name="bay" value="">
         <input type="submit" value="Hacer un pedido" id="target" data-wait="Please wait..." class="submit-button w-button">
       </form>
       <div class="w-form-done">
@@ -203,9 +205,9 @@
   });
 
 
-  const link = window.location.search.replace('?', '') .split('&');
-  const res = link.reduce(function(a,b){
-            const spl = b.split('=');
+  let link = window.location.search.replace('?', '') .split('&');
+  let res = link.reduce(function(a,b){
+            let spl = b.split('=');
             a[decodeURIComponent(spl[0])] = decodeURIComponent(spl[1]);
             return a;
         },{}
@@ -213,7 +215,7 @@
     );
     console.log(res);
 
-  
+ 
 
 
 
